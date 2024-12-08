@@ -1,0 +1,37 @@
+import numpy as np
+#splitting the array is defined as the reverse of joining.
+#array_split()
+#Splitt the array in 3 parts
+x=np.array([1,2,3,4,5,6])
+x1=np.array_split(x,3)
+x2=np.array_split(x,4)  # it uses it own brain as it splits the 4 into different as
+#[array([1, 2]), array([3, 4]), array([5]), array([6])]
+print(x)
+print(x1)
+print(x2)
+
+#Split into array with index->
+import numpy as np
+x=np.array([1,2,3,4,5,6])
+x1=np.array_split(x,3)
+print(x1[1])
+
+#Splitting the 2-D array->
+import numpy as np
+y=np.array([[1,2],[3,4],[5,6],[7,8],[9,10],[11,12]])
+y_new=np.array_split(y,3)
+y1_new=np.array_split(y,4)
+print(y_new)
+print(y1_new)
+
+#Splitting the 2-D into three 2-diagonal with rows.
+import numpy as np
+u=np.array([[1,2,3],[4,5,6],[7,8,9],[9,10,11],[12,13,14]])
+u1=np.array_split(u,3,axis=1)
+print(u1)
+#axis=1 means that spliiting along the rows.
+#Splitt using the hsplit
+import numpy as np
+o=np.array([[1,2,3],[4,5,6],[7,8,9],[9,10,11],[12,13,14]])
+o1=np.hsplit(o,3)
+print(o1)
